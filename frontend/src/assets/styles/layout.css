@@ -1,0 +1,23 @@
+.container {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.page {
+    min-height: calc(100vh - 160px);
+    padding: 40px 0;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 16px;
+}
+
+.section-description {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
