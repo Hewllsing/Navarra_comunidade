@@ -5,6 +5,8 @@ import NovaCandidaturaView from '../views/NovaCandidatura/NovaCandidaturaView.vu
 import ConsultarPedidoView from '../views/ConsultarPedido/ConsultarPedidoView.vue';
 import BackofficeView from '../views/Backoffice/BackofficeView.vue';
 import CandidaturaDetalheView from '../views/CandidaturaDetalhe/CandidaturaDetalheView.vue';
+import LoginView from '../views/Login/LoginView.vue';
+import RegisterView from '../views/Register/RegisterView.vue';
 
 const routes = [
     {
@@ -31,6 +33,14 @@ const routes = [
         path: '/backoffice/candidaturas/:id',
         name: 'candidatura-detalhe',
         component: CandidaturaDetalheView
+    },
+    {
+        path: '/login',
+        component: LoginView
+    },
+    {
+        path: '/register',
+        component: RegisterView
     }
 ];
 

@@ -1,11 +1,15 @@
 const express = require('express');
 const router = express.Router();
 
+const { authenticateToken, requireAdmin } = require('../middlewares/authMiddleware');
 const candidaturaController = require('../controllers/candidaturaController');
 
-router.get('/', candidaturaController.listarCandidaturas);
-router.post('/', candidaturaController.criarCandidatura);
+// Rotas públicas (qualquer utilizador autenticado)
+router.post('/', authenticateToken, candidaturaController.criarCandidatura);
 router.get('/:id', candidaturaController.obterCandidaturaPorId);
-router.put('/:id/estado', candidaturaController.atualizarEstado);
+
+// Rotas protegidas para administração
+router.get('/', authenticateToken, requireAdmin, candidaturaController.listarCandidaturas);
+router.put('/:id/estado', authenticateToken, requireAdmin, candidaturaController.atualizarEstado);
 
 module.exports = router;
