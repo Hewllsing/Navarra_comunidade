@@ -1,0 +1,79 @@
+.back-link {
+    display: inline-block;
+    margin-bottom: 24px;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.detail-card {
+    background: white;
+    border: 1px solid var(--border-color);
+    padding: 32px;
+}
+
+.detail-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 24px;
+    margin-bottom: 30px;
+}
+
+.detail-header h1 {
+    color: var(--primary-color);
+    margin-bottom: 8px;
+}
+
+.detail-section {
+    margin-bottom: 34px;
+}
+
+.detail-section h2 {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px 30px;
+}
+
+.text-block {
+    margin-top: 18px;
+    line-height: 1.7;
+}
+
+.estado-form {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.estado-form select {
+    padding: 12px;
+    border: 1px solid var(--border-color);
+}
+
+.table-row-clickable {
+    cursor: pointer;
+}
+
+.table-row-clickable:hover {
+    background: #f5f5f5;
+}
+
+@media (max-width: 800px) {
+    .detail-header,
+    .estado-form {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .detail-grid {
+        grid-template-columns: 1fr;
+    }
+}

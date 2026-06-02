@@ -4,6 +4,7 @@ import HomeView from '../views/Home/HomeView.vue';
 import NovaCandidaturaView from '../views/NovaCandidatura/NovaCandidaturaView.vue';
 import ConsultarPedidoView from '../views/ConsultarPedido/ConsultarPedidoView.vue';
 import BackofficeView from '../views/Backoffice/BackofficeView.vue';
+import CandidaturaDetalheView from '../views/CandidaturaDetalhe/CandidaturaDetalheView.vue';
 
 const routes = [
     {
@@ -25,6 +26,11 @@ const routes = [
         path: '/backoffice',
         name: 'backoffice',
         component: BackofficeView
+    },
+    {
+        path: '/backoffice/candidaturas/:id',
+        name: 'candidatura-detalhe',
+        component: CandidaturaDetalheView
     }
 ];
 
