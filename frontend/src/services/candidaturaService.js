@@ -11,3 +11,16 @@ export async function listarCandidaturas() {
     const response = await axios.get(API_URL);
     return response.data;
 }
+
+export async function obterCandidaturaPorId(id) {
+    const response = await axios.get(`${API_URL}/${id}`);
+    return response.data;
+}
+
+export async function atualizarEstadoCandidatura(id, estado) {
+    const response = await axios.put(`${API_URL}/${id}/estado`, {
+        estado
+    });
+
+    return response.data;
+}

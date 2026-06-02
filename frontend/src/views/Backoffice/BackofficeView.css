@@ -1,0 +1,22 @@
+.candidaturas-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+}
+
+.candidaturas-table th,
+.candidaturas-table td {
+    padding: 14px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+.candidaturas-table th {
+    background: #0092AC;
+    color: white;
+}
+
+.estado {
+    padding: 6px 10px;
+    background: #f5f5f5;
+}
